@@ -2,7 +2,7 @@ body {
   background-color: green;
 }
 
-#app {
+div#app {
   display: flex;
   flex-wrap: wrap;
 }
