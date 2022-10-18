@@ -6,5 +6,13 @@ div#app {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  justify-content: space-evenly;
+  gap: 20px 20px;
+}
+
+h5 {
+  text-align: center;
+}
+
+.card-footer {
+  text-align: center;
 }
