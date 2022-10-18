@@ -2,7 +2,8 @@ body {
   background-color: rgb(187, 192, 187);
 }
 
-div.card {
+div#app {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }

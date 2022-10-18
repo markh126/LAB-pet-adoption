@@ -251,7 +251,7 @@ const renderToDom = (divId, htmlToRender) => {
   let domString = "";
   for (const animals of array) {
     domString +=`
-      <div class="card style="width: 18rem" w-50 p3 text-center container">
+      <div class="card" style="width: 18rem" text-center container">
         <h5 class="card-header p-3">
           ${animals.name}
         </h5>
@@ -263,7 +263,7 @@ const renderToDom = (divId, htmlToRender) => {
         <p class="card-footer text-muted">
           ${animals.type}
         </p>
-      </div>;`
+      </div>`
   }
 
   renderToDom("#app", domString);
