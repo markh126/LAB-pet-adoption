@@ -20,6 +20,11 @@ h5 {
 .fill {
   text-transform: uppercase;
   text-shadow: 2px 2px 5px;
-  font-weight: bold;
-  font-family: 'Times New Roman', Times, serif;
+}
+
+.card-footer {
+  text-transform: capitalize;
+  background-color: palegreen;
+  opacity: .3;
+
 }

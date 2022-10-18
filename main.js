@@ -259,6 +259,7 @@ const renderToDom = (divId, htmlToRender) => {
           <img class="img-fluid w-100" src="${animals.imageUrl}">
           <p class="card-text">${animals.color}</p>
           <p class="card-text-two">${animals.specialSkill}</p>
+          <button class="btn btn-danger" id="delete--${animals.id}">Delete</button>
         </div>
         <p class="card-footer text-muted">
           ${animals.type}
@@ -328,3 +329,16 @@ const createPet = (e) => {
 }
 
   form.addEventListener("submit", createPet);
+
+  const app = document.querySelector("#app");
+
+  app.addEventListener('click', (e) => {
+    if(e.target.id.includes("delete")) {
+      const [, id] = e.target.id.split("--");
+
+      const index = pets.findIndex(e => e.id === Number(id));
+      pets.splice(index, 1);
+
+      cardsOnDom(pets);
+    }
+  })
