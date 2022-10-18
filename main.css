@@ -6,5 +6,20 @@ div#app {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  justify-content: space-evenly;
+  gap: 20px 20px;
+}
+
+h5 {
+  text-align: center;
+}
+
+.card-footer {
+  text-align: center;
+}
+
+.fill {
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
 }
