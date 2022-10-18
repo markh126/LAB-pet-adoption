@@ -251,7 +251,7 @@ const renderToDom = (divId, htmlToRender) => {
   let domString = "";
   for (const animals of array) {
     domString +=`
-      <div class="card w-50 p3 text-center container">
+      <div class="card" style="width: 18rem" text-center container">
         <h5 class="card-header p-3">
           ${animals.name}
         </h5>
@@ -263,7 +263,7 @@ const renderToDom = (divId, htmlToRender) => {
         <p class="card-footer text-muted">
           ${animals.type}
         </p>
-      </div>;`
+      </div>`
   }
 
   renderToDom("#app", domString);
@@ -307,3 +307,24 @@ showDinosButton.addEventListener('click', () => {
   const dinoPets = filter(pets, 'dino');
   cardsOnDom(dinoPets);
 })
+
+const form = document.querySelector("form");
+
+const createPet = (e) => {
+  e.preventDefault();
+
+  const newPetObj = {
+    id: pets.length + 1,
+    name: document.querySelector("#name").value,
+    color: document.querySelector("#color").value,
+    specialSkill: document.querySelector("#specialSkill").value,
+    type: document.querySelector("#type").value,
+    imageUrl: document.querySelector("#imageUrl").value,
+  }
+
+  pets.push(newPetObj);
+  cardsOnDom(pets);
+  form.reset();
+}
+
+  form.addEventListener("submit", createPet);
